@@ -8,41 +8,6 @@ your application whatever you want.  However, the name of the database will alwa
 match the application so you might have to update .openshift/action_hooks/build.
 
 
-Running on OpenShift
-----------------------------
-
-Create an account at http://openshift.redhat.com/
-
-Create a php-5.3 application (you can call your application whatever you want)
-
-    rhc app create -a wordpress -t php-5.3
-
-Add MySQL support to your application
-
-    rhc app cartridge add -a wordpress -c mysql-5.1
-
-Add this upstream Wordpress repo
-
-    cd wordpress 
-    git remote add upstream -m master git://github.com/openshift/wordpress-example.git
-    git pull -s recursive -X theirs upstream master
-    # note that the git pull above can be used later to pull updates to Wordpress
-    
-Then push the repo upstream
-
-    git push
-
-That's it, you can now checkout your application at:
-
-    http://wordpress-$yournamespace.rhcloud.com
-    
-Default Credentials
--------------------
-<table>
-<tr><td>Default Admin Username</td><td>admin</td></tr>
-<tr><td>Default Admin Password</td><td>OpenShiftAdmin</td></tr>
-</table>
-
 Notes
 =====
 
