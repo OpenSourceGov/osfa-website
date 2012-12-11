@@ -1,5 +1,16 @@
 *** BlogoLife Changelog ***
 
+20.09.2012 - version 2.0.1
+* Fixed
+	* Screenshot image 
+	* Alt for header image
+* Added
+	* Compatibility with WordPress 3.4.2
+	* Footer Widget
+	* Displaying excerpt to posts
+	* Pinterest Icon
+	* UP button for better navigation
+	
 18.01.2012 - version 2.0
 * Fixed
 	* Translation for comments

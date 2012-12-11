@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Responsive Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-25 13:42:58 UTC\n"
-"PO-Revision-Date: 2012-08-06 21:22+0100\n"
+"PO-Revision-Date: 2012-11-04 13:57+0100\n"
 "Last-Translator: Ulrich Pogson <grapplerulrich@gmail.com>\n"
 "Language-Team: Slovenian, Slovenia\n"
 "MIME-Version: 1.0\n"
@@ -12,6 +12,10 @@ msgstr ""
 "X-Generator: WebTranslateIt.com\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -26,6 +30,11 @@ msgstr ""
 msgid "404 &#8212; Fancy meeting you here!"
 msgstr "404 &#8212; Kaj delaš tukaj?!"
 
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: page.php
 #: landing-page.php
 #: full-width-page.php
@@ -38,6 +47,11 @@ msgstr "404 &#8212; Kaj delaš tukaj?!"
 msgid "Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here."
 msgstr "Ne skrbi. Skupaj bomo rešili problem. Preglejmo možnosti."
 
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -52,6 +66,14 @@ msgstr "Ne skrbi. Skupaj bomo rešili problem. Preglejmo možnosti."
 msgid "You can return"
 msgstr "Lahko se vrneš"
 
+#: includes/functions.php
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
+#: index.php
+#: image.php
 #: page.php
 #: landing-page.php
 #: full-width-page.php
@@ -64,6 +86,11 @@ msgstr "Lahko se vrneš"
 msgid "Home"
 msgstr "Domov"
 
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: 404.php
 #: page.php
 #: landing-page.php
@@ -78,6 +105,11 @@ msgstr "Domov"
 msgid "&larr; Home"
 msgstr "&larr; Domov"
 
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -108,6 +140,8 @@ msgstr "Letni arhiv: %s"
 msgid "Blog Archives"
 msgstr "Arhiv"
 
+#: sitemap.php
+#: search.php
 #: index.php
 #: blog.php
 #: blog-excerpt.php
@@ -115,30 +149,10 @@ msgstr "Arhiv"
 msgid "Permanent Link to %s"
 msgstr "Trajna povezava %s"
 
-#: page.php
-#: index.php
-#: image.php
-#: full-width-page.php
-#: content-sidebar-page.php
-#: content-sidebar-half-page.php
-#: blog.php
-#: blog-excerpt.php
-#: archive.php
-msgid "<span class=\"%1$s\">Posted on</span> %2$s by %3$s"
-msgstr "<span class=\"%1$s\">Objavljeno</span> %2$s от %3$s"
-
-#: page.php
-#: index.php
-#: image.php
-#: full-width-page.php
-#: content-sidebar-page.php
-#: content-sidebar-half-page.php
-#: blog.php
-#: blog-excerpt.php
-#: archive.php
-msgid "View all posts by %s"
-msgstr "Poglej objave od %s"
-
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: page.php
 #: index.php
 #: image.php
@@ -151,30 +165,11 @@ msgstr "Poglej objave od %s"
 msgid "No Comments &darr;"
 msgstr "Ni komentarjev &darr;"
 
-#: page.php
-#: index.php
-#: image.php
-#: full-width-page.php
-#: content-sidebar-page.php
-#: content-sidebar-half-page.php
-#: blog.php
-#: blog-excerpt.php
-#: archive.php
-msgid "1 Comment &darr;"
-msgstr "1 komentar &darr;"
-
-#: page.php
-#: index.php
-#: image.php
-#: full-width-page.php
-#: content-sidebar-page.php
-#: content-sidebar-half-page.php
-#: blog.php
-#: blog-excerpt.php
-#: archive.php
-msgid "% Comments &darr;"
-msgstr "% komentarja &darr;"
-
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -188,6 +183,9 @@ msgstr "% komentarja &darr;"
 msgid "Pages:"
 msgstr "Strani:"
 
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -201,6 +199,9 @@ msgstr "Strani:"
 msgid "Tagged with:"
 msgstr "Oznake:"
 
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -214,6 +215,11 @@ msgstr "Oznake:"
 msgid "Posted in %s"
 msgstr "Objavljeno v %s"
 
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -227,6 +233,11 @@ msgstr "Objavljeno v %s"
 msgid "Edit"
 msgstr "Popravi"
 
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -239,6 +250,11 @@ msgstr "Popravi"
 msgid "&#8249; Older posts"
 msgstr "&#8249; Starejše objave"
 
+#: sitemap.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
+#: search.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -251,6 +267,10 @@ msgstr "&#8249; Starejše objave"
 msgid "Newer posts &#8250;"
 msgstr "Novejše objave &#8250;"
 
+#: includes/functions.php
+#: single.php
+#: sidebar-content-page.php
+#: sidebar-content-half-page.php
 #: page.php
 #: landing-page.php
 #: index.php
@@ -271,14 +291,6 @@ msgid "&#8249; Older comments"
 msgstr "&#8249; Starejši komentarji"
 
 #: comments.php
-msgid "One comment on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
-msgstr[0] "En komentar v &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s komentarjev v &ldquo;%2$s&rdquo;"
-msgstr[2] "%1$s komentarjev v &ldquo;%2$s&rdquo;"
-msgstr[3] "%1$s komentarjev v &ldquo;%2$s&rdquo;"
-
-#: comments.php
 msgid "Newer comments &#8250;"
 msgstr "Novejši komentarji &#8250;"
 
@@ -287,12 +299,20 @@ msgid "Pings&#47;Trackbacks"
 msgstr "Pingi/Povratne povezave"
 
 #: comments.php
-msgid "for"
-msgstr "za"
+msgid "%1$d %2$s for \"%3$s\""
+msgstr "%1$d %2$s za \"%3$s\""
 
 #: comments.php
 msgid "Name"
 msgstr "Ime"
+
+#: comments.php
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] "En komentar v &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s komentarjev v &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s komentarjev v &ldquo;%2$s&rdquo;"
+msgstr[3] "%1$s komentarjev v &ldquo;%2$s&rdquo;"
 
 #: comments.php
 msgid "E-mail"
@@ -328,7 +348,7 @@ msgstr "Narejeno z"
 
 #: footer.php
 msgid "http://wordpress.org/"
-msgstr "http://hr.wordpress.org/"
+msgstr "http://sl.wordpress.org/"
 
 #: footer.php
 msgid "WordPress"
@@ -360,13 +380,12 @@ msgid "Don't panic, we'll get through this together. Let's explore our options h
 msgstr "Ne skrbi. Skupaj bomo rešili problem. Preglejmo možnosti."
 
 #: index.php
-#: image.php
-msgid "home"
-msgstr "domov"
+msgid "1 Comment &darr;"
+msgstr "1 komentar &darr;"
 
-#: search.php
-msgid "Search Results for: %s"
-msgstr "Rezultati iskanja za: %s"
+#: index.php
+msgid "% Comments &darr;"
+msgstr "% komentarji &darr;"
 
 #: search.php
 msgid "Your search for"
@@ -485,32 +504,32 @@ msgid "Footer Menu"
 msgstr "Meni v nogi"
 
 #: includes/functions.php
-msgid "Archive for "
-msgstr "Arhiv za "
+msgid "<span class=\"%1$s\">Posted on </span>%2$s<span class=\"%3$s\"> by </span>%4$s"
+msgstr "<span class=\"%1$s\">Objavljeno </span>%2$s<span class=\"%3$s\"> оd </span>%4$s"
 
 #: includes/functions.php
-msgid "Search results for "
-msgstr "Rezultati iskanja za "
+msgid "View all posts by %s"
+msgstr "Poglej objave od %s"
 
 #: includes/functions.php
-msgid "Posts tagged "
-msgstr "Objave z oznako "
+msgid "Archive for %s"
+msgstr "Arhiv za %s"
 
 #: includes/functions.php
-msgid "All posts by "
-msgstr "Vse objave od "
+msgid "Search results for: %s"
+msgstr "Rezultati iskanja za: %s"
+
+#: includes/functions.php
+msgid "Posts tagged %s"
+msgstr "Objave z oznako %s"
 
 #: includes/functions.php
 msgid "Error 404 "
-msgstr "Error 404 "
+msgstr "Napaka 404 "
 
 #: includes/functions.php
 msgid "Page"
 msgstr "Stran"
-
-#: includes/functions.php
-msgid "Untitled"
-msgstr "Brez naslova"
 
 #: includes/functions.php
 msgid "http://themeid.com/support/"
@@ -530,7 +549,7 @@ msgstr "Več tem"
 
 #: includes/functions.php
 msgid "http://themeid.com/showcase/"
-msgstr "http://themeid.com/pregled/"
+msgstr "http://themeid.com/showcase/"
 
 #: includes/functions.php
 msgid "Showcase"
@@ -570,7 +589,7 @@ msgstr "Tretje mesto - sidebar-left.php"
 
 #: includes/functions.php
 msgid "Left Sidebar Half Page"
-msgstr "Levi sidebar pol strani"
+msgstr "Leva stranska vrstica, pol strani"
 
 #: includes/functions.php
 msgid "Area Four - sidebar-left-half.php"
@@ -578,7 +597,7 @@ msgstr "Četrto mesto - sidebar-left-half.php"
 
 #: includes/functions.php
 msgid "Right Sidebar Half Page"
-msgstr "Desni sidebar pol strani"
+msgstr "Desna stranska vrstica, pol strani"
 
 #: includes/functions.php
 msgid "Area Five - sidebar-right-half.php"
@@ -598,11 +617,27 @@ msgstr "Osmo mesto - sidebar-home.php"
 
 #: includes/functions.php
 msgid "Gallery Sidebar"
-msgstr "Galerija sidebar"
+msgstr "Galerija - stranska vrstica"
 
 #: includes/functions.php
 msgid "Area Nine - sidebar-gallery.php"
 msgstr "Deveto mesto - sidebar-gallery.php"
+
+#: includes/functions.php
+msgid "Colophon Widget"
+msgstr "Kolofon gradnik"
+
+#: includes/functions.php
+msgid "Area Ten - sidebar-colophon.php"
+msgstr "Prostor deset - stranski-kolofon.php"
+
+#: includes/functions.php
+msgid "Top Widget"
+msgstr "Gornji gradnik"
+
+#: includes/functions.php
+msgid "Area Twelve - sidebar-top.php"
+msgstr "Prostor 12 - stranski-zgoraj.php"
 
 #: includes/theme-options.php
 msgid "Theme Options"
@@ -638,7 +673,7 @@ msgstr "Naloži logotip"
 
 #: includes/theme-options.php
 msgid "Custom Header"
-msgstr "Spremeba glave (Header)"
+msgstr "Sprememba glave (Header)"
 
 #: includes/theme-options.php
 msgid "Need to replace or remove default logo?"
@@ -705,8 +740,8 @@ msgid "See Docs"
 msgstr "Dokumentacija"
 
 #: includes/theme-options.php
-msgid "Paste your video or image source"
-msgstr "Vstavi video ili sliko"
+msgid "Paste your shortcode, video or image source"
+msgstr "Prilepi kodo, video ali sliko"
 
 #: includes/theme-options.php
 msgid "Webmaster Tools"
@@ -863,4 +898,36 @@ msgstr "CSS Tutorial"
 #: includes/theme-options.php
 msgid "Enter your custom CSS styles."
 msgstr "Tvoj CSS Stil"
+
+#: includes/theme-options.php
+msgid "Custom Scripts"
+msgstr "Skripte po meri"
+
+#: includes/theme-options.php
+msgid "Custom Scripts for Header and Footer"
+msgstr "Skripte po meri za Glavo in Nogo"
+
+#: includes/theme-options.php
+msgid "http://codex.wordpress.org/Using_Javascript"
+msgstr "http://codex.wordpress.org/Using_Javascript"
+
+#: includes/theme-options.php
+msgid "Quick Tutorial"
+msgstr "Hitra navodila"
+
+#: includes/theme-options.php
+msgid "Embeds to header.php &darr;"
+msgstr "Vstavljeno v header.php &darr;"
+
+#: includes/theme-options.php
+msgid "Enter your custom header script."
+msgstr "Vstavi svojo skripto po meri za glavo."
+
+#: includes/theme-options.php
+msgid "Embeds to footer.php &darr;"
+msgstr "Vstavljeno v header.php &darr;"
+
+#: includes/theme-options.php
+msgid "Enter your custom footer script."
+msgstr "Vstavi svojo skripto po meri za nogo."
 

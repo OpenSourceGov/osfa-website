@@ -8,15 +8,14 @@ if ( !defined('ABSPATH')) exit;
  *
  *
  * @file           hooks.php
- * @package        WordPress 
- * @subpackage     responsive 
+ * @package        Responsive 
  * @author         Emil Uzelac 
- * @copyright      2003 - 2011 ThemeID
+ * @copyright      2003 - 2012 ThemeID
  * @license        license.txt
  * @version        Release: 1.0
  * @filesource     wp-content/themes/responsive/includes/hooks.php
  * @link           http://codex.wordpress.org/Plugin_API/Hooks
- * @since          available since Release 1.0
+ * @since          available since Release 1.1
  */
 ?>
 <?php

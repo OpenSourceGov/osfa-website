@@ -98,6 +98,28 @@ function responsive_inline_css() {
 }
 
 add_action('wp_head', 'responsive_inline_css');
+
+function responsive_inline_js_head() {
+    $options = get_option('responsive_theme_options');
+    if (!empty($options['responsive_inline_js_head'])) {
+		echo '<!-- Custom Scripts -->' . "\n";
+        echo $options['responsive_inline_js_head'];
+		echo "\n";
+	}
+}
+
+add_action('wp_head', 'responsive_inline_js_head');
+
+function responsive_inline_js_footer() {
+    $options = get_option('responsive_theme_options');
+    if (!empty($options['responsive_inline_js_footer'])) {
+		echo '<!-- Custom Scripts -->' . "\n";
+        echo $options['responsive_inline_js_footer'];
+		echo "\n";
+	}
+}
+
+add_action('wp_footer', 'responsive_inline_js_footer');
 	
 /**
  * Create the options page
@@ -122,8 +144,8 @@ function responsive_theme_options_do_page() {
 		<div class="updated fade"><p><strong><?php _e('Options Saved', 'responsive'); ?></strong></p></div>
 		<?php endif; ?>
         
-            <?php responsive_theme_options(); // Theme Options Hook ?>
-
+        <?php responsive_theme_options(); // Theme Options Hook ?>
+        
         <form method="post" action="options.php">
             <?php settings_fields('responsive_options'); ?>
             <?php $options = get_option('responsive_theme_options'); ?>
@@ -250,7 +272,7 @@ function responsive_theme_options_do_page() {
                 </div><!-- end of .grid col-300 -->
                     <div class="grid col-620 fit">
                         <textarea id="responsive_theme_options[featured_content]" class="large-text" cols="50" rows="10" name="responsive_theme_options[featured_content]"><?php if (!empty($options['featured_content'])) echo esc_html($options['featured_content']); ?></textarea>
-                        <label class="description" for="responsive_theme_options[featured_content]"><?php _e('Paste your video or image source', 'responsive'); ?></label>
+                        <label class="description" for="responsive_theme_options[featured_content]"><?php _e('Paste your shortcode, video or image source', 'responsive'); ?></label>
                         <p class="submit">
                         <input type="submit" class="button-primary" value="<?php _e('Save Options', 'responsive'); ?>" />
                         </p>
@@ -303,7 +325,7 @@ function responsive_theme_options_do_page() {
                 ?>
                 <div class="grid col-300">
 				    <?php _e('Site Statistics Tracker', 'responsive'); ?>
-                    <span class="help-links"><?php _e('Leave blank if plugin handles your webmaster tools', 'responsive'); ?></span>
+                    <span class="info-box information help-links"><?php _e('Leave blank if plugin handles your webmaster tools', 'responsive'); ?></span>
                 </div><!-- end of .grid col-300 -->
                     
                     <div class="grid col-620 fit">
@@ -430,6 +452,37 @@ function responsive_theme_options_do_page() {
                 </div><!-- end of .rwd-block -->
             </div><!-- end of .rwd-container -->
             
+            <h3 class="rwd-toggle"><a href="#"><?php _e('Custom Scripts', 'responsive'); ?></a></h3>
+            <div class="rwd-container">
+                <div class="rwd-block"> 
+
+                <?php
+                /**
+                 * Custom Styles
+                 */
+                ?>
+                <div class="grid col-300">
+				    <?php _e('Custom Scripts for Header and Footer', 'responsive'); ?>
+                    <a class="help-links" href="<?php echo esc_url(__('http://codex.wordpress.org/Using_Javascript','responsive')); ?>" title="<?php esc_attr_e('Quick Tutorial', 'responsive'); ?>" target="_blank">
+                    <?php printf(__('Quick Tutorial','responsive')); ?></a>
+                </div><!-- end of .grid col-300 -->
+                
+                    <div class="grid col-620 fit">
+                        <p><?php printf(__('Embeds to header.php &darr;','responsive')); ?></p>
+                        <textarea id="responsive_theme_options[responsive_inline_js_head]" class="inline-css large-text" cols="50" rows="30" name="responsive_theme_options[responsive_inline_js_head]"><?php if (!empty($options['responsive_inline_js_head'])) echo esc_textarea($options['responsive_inline_js_head']); ?></textarea>
+                        <label class="description" for="responsive_theme_options[responsive_inline_js_head]"><?php _e('Enter your custom header script.', 'responsive'); ?></label>
+                        
+                        <p><?php printf(__('Embeds to footer.php &darr;','responsive')); ?></p>
+                        <textarea id="responsive_theme_options[responsive_inline_js_footer]" class="inline-css large-text" cols="50" rows="30" name="responsive_theme_options[responsive_inline_js_footer]"><?php if (!empty($options['responsive_inline_js_footer'])) echo esc_textarea($options['responsive_inline_js_footer']); ?></textarea>
+                        <label class="description" for="responsive_theme_options[responsive_inline_js_footer]"><?php _e('Enter your custom footer script.', 'responsive'); ?></label>
+                        <p class="submit">
+                        <input type="submit" class="button-primary" value="<?php _e('Save Options', 'responsive'); ?>" />
+                        </p>
+                    </div><!-- end of .grid col-620 -->
+                                    
+                </div><!-- end of .rwd-block -->
+            </div><!-- end of .rwd-container -->
+            
             </div><!-- end of .grid col-940 -->
         </form>
     </div>
@@ -474,6 +527,8 @@ function responsive_theme_options_validate($input) {
 	$input['vimeo_uid'] = esc_url_raw($input['vimeo_uid']);
 	$input['foursquare_uid'] = esc_url_raw($input['foursquare_uid']);
 	$input['responsive_inline_css'] = wp_kses_stripslashes($input['responsive_inline_css']);
+	$input['responsive_inline_js_head'] = wp_kses_stripslashes($input['responsive_inline_js_head']);
+	$input['responsive_inline_css_js_footer'] = wp_kses_stripslashes($input['responsive_inline_css_js_footer']);
 	
     return $input;
 }

@@ -8,6 +8,131 @@ Changelog Legend:
 [x] = Deleted
 [!] = Bugs
 
+(12/09/2012) - Maintenance and Improvements - Version 1.8.4.1
+[!] Sidebar Half Page - rtl.css
+
+
+(11/25/2012) - Maintenance and Improvements - Version 1.8.4
+[*] blog-excerpt.php Template now uses a default sidebar
+[*] content-sidebar-page.php Template is now the only 
+    Template where right sidebar is assigned to.
+[*] IE9+ Conditionals
+[x] IE6 Conditionals
+[+] IE Conditionals to target non-ie browsers.
+[+] FitVids support for YouTube's "privacy-enhanced" mode.
+[+] Border Radius and improvements for Author's Box.
+[!] <pre> code fix
+
+----
+
+(11/14/2012) - Maintenance and Improvements - Version 1.8.3
+[*] TinyNav Update - https://github.com/viljamis/TinyNav.js
+[*] CSS Fix for TinyNav on the landing page template
+
+----
+
+(11/07/2012) - Maintenance and Improvements - Version 1.8.2
+[*] Localization Improvements
+[*] TinyNav Update
+[*] CSS Improvements
+
+(10/11/2012) - IE Fix - Version 1.8.0.1
+[!] IE Current Page Item Fix
+
+----
+
+(10/09/2012) - Maintenance and Improvements - Version 1.8.0
+[*] W3C Markup Validation
+[!] Android Squares in Menus
+[*] All New CSS Button Gradients
+[*] New Default Logo
+[*] New TinyNav Background
+[*] New Screenshot
+[*] CSS Improvements
+
+----
+
+(09/30/2012) - Quick Bug Fixes - Version 1.7.9.1
+[!] Partial Localization
+[!] Top Widget Form
+[!] Error 404 Forms
+[x] (temporary) Previously added 4 languages
+	- Indonesian
+	- Welsh
+	- Turkish
+	- Romanian
+	
+----
+
+(09/27/2012) - Maintenance and Improvements - Version 1.7.9
+[*] Localization and Languages
+    - Global Localization Improvements
+	- New responsive.pot re-generated
+	- New Languages (32 total):
+	- Indonesian
+	- Welsh
+	- Turkish
+	- Romanian
+[*] style.css
+    - Pretty Indentation
+	- Better Form Responsiveness
+[!] style.css
+    - <hr />
+	- IE7 dropdown menu
+[x]
+    - #widgets ID from top-widget not needed
+    - X-UA-Compatible from header.php not needed 
+[+] W3C Markup Validation
+[+] RTL Support
+
+----
+
+
+(09/09/2012) - Maintenance and Improvements - Version 1.7.8
+[*] Language Revisions
+    - responsive.pot
+	- Japanese
+	- Finish
+	- Lithuanian
+[*] Script Updates
+[*] style.css
+    - IE image fixes
+	- pre code improvements
+	- general improvements and clean-ups
+[x] no-title, substituted with dates only
+[+] Retina (HiDPI) Display Support
+    - Media Queries
+[+] TinyNav - page/post select box intends
+[+] Top Widget
+
+----
+
+(08/27/2012) - IE7 Bug Fix - Version 1.7.7
+[+] Theme Options, support links hook
+[+] New Languages
+    - Czech
+    - Hungarian
+    - Greek
+[*] responsive.pot
+[*] tinynav.js jQuery 1.8.0 compatibility
+
+(08/21/2012) - IE7 Bug Fix - Version 1.7.6
+[!] widget clearfix
+
+----
+
+(08/19/2012) - Maintenance and Improvements - Version 1.7.5
+[+] Shortcode support for home and featured areas
+[+] Colophon widget (on-demand)
+[x] style.css
+    - Table blocks for 480px
+	- Margins for old widgets
+[*] style.css
+    - Description
+[x] Old action hook
+[*] Modernizr 2.6.1 (update)
+
+
 (08/06/2012) - Improvements - Version 1.7.3/4
 [+] WooCommerce Compatible
 [+] New Languages

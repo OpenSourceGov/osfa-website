@@ -19,47 +19,14 @@ function wplook_setup() {
 	
 function register_my_menus() {
 	register_nav_menus(
-	array('primary' => __( 'WPLOOK Main Navigation', 'wplook' ),) 
+	array('primary' => __( 'WPlook Main Navigation', 'wplook' ),) 
 );
 
 }
 add_action( 'init', 'register_my_menus' );
 
-wp_create_nav_menu( 'WPLOOK Main Menu', array( 'slug' => 'primary' ) );
+wp_create_nav_menu( 'WPlook Main Menu', array( 'slug' => 'primary' ) );
 
-	// The default header text color
-	define( 'HEADER_TEXTCOLOR', '666' );
-
-	// By leaving empty, we allow for random image rotation.
-	define( 'HEADER_IMAGE', '' );
-
-	// The height and width of your custom header.
-	// Add a filter to wplook_header_image_width and wplook_header_image_height to change these values.
-	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'wplook_header_image_width', 960 ) );
-	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'wplook_header_image_height', 200 ) );
-
-	// We'll be using post thumbnails for custom header images on posts and pages.
-	// We want them to be the size of the header image that we just defined
-	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
-	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
-
-	// Add custom image sizes
-	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
-	// Turn on random header image rotation by default.
-	add_theme_support( 'custom-header', array( 'random-default' => true ) );
-	// Add a way for the custom header to be styled in the admin panel that controls
-	// custom headers. See wplook_admin_header_style(), below.
-	add_custom_image_header( 'wplook_header_style', 'wplook_admin_header_style', 'wplook_admin_header_image' );
-	
-		// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
-	register_default_headers( array(
-		'ipad' => array(
-			'url' => '%s/images/headers/ipad.jpg',
-			'thumbnail_url' => '%s/images/headers/ipad-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'iPad', 'wplook' )
-		)
-	) );
 
 }
 
@@ -176,21 +143,42 @@ endif; // wplook_admin_header_image
 if ( ! isset( $content_width ) )
 	$content_width = 565;
 	
-if ( function_exists( 'add_theme_support' ) ) { 
+if ( function_exists( 'add_theme_support' ) ) {
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 // Add support for a variety of post formats
 add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'  ) );
-	// Add support for custom backgrounds
-	
-define('BACKGROUND_IMAGE', '%s/images/bg.png');
-define('BACKGROUND_COLOR', 'f3f3f3');
 
-add_custom_background();
+// Add support for custom backgrounds
+$wplook_bg_defaults = array(
+	'default-color'			=> 'f3f3f3',
+	'default-image' 		=> get_template_directory_uri() . '/images/bg.png',
+	'wp-head-callback'		=> '_custom_background_cb',
+	'admin-head-callback'	=> '',
+	'admin-preview-callback'=> ''
+);
+add_theme_support( 'custom-background', $wplook_bg_defaults );
 
-set_post_thumbnail_size( 150, 100, true ); // default Post Thumbnail dimensions (cropped)
+// Add support for custom header
+$wplook_ch_defaults = array(
+	'default-image'			=> '%s/images/headers/ipad.jpg',
+	'random-default'		=> true,
+	'width'					=> 960,
+	'height'				=> 200,
+	'flex-height'			=> true,
+	'flex-width'			=> true,
+	'header-text'			=> true,
+	'default-text-color'	=> '000000',
+	'uploads'				=> true,
+	'wp-head-callback'		=> 'wplook_header_style',
+	'admin-head-callback'	=> 'wplook_admin_header_style',
+	'admin-preview-callback'=> 'wplook_admin_header_image',
+);
+add_theme_support( 'custom-header', $wplook_ch_defaults );
 
-
+// default Post Thumbnail dimensions (cropped)
+set_post_thumbnail_size( 150, 100, true ); 
+add_image_size( 'ch-images', 960, 200, true );
 /**
  * Display navigation to next/previous pages when applicable
  */
@@ -228,7 +216,7 @@ function wplook_dashboard_widgets() {
 		$wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'],
 		$wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']
 	);
-		wp_add_dashboard_widget( 'dashboard_custom_feed', 'wplook news' , 'dashboard_custom_feed_output' );
+		wp_add_dashboard_widget( 'dashboard_custom_feed', 'WPlook news' , 'dashboard_custom_feed_output' );
 }
 function dashboard_custom_feed_output() {
 		echo '<div class="rss-widget rss-wplook">';
@@ -275,8 +263,8 @@ the_time(get_option('time_format'));}
 <div id="sidebar_box">
 	<p>
 		<label for=""><?php _e( 'Enable Sidebar:' , 'wplook' ); ?></label>      
-     <label for="sidebar_yes"><?php _e( 'Yes' , 'wplook' ); ?></label><input type="radio" id="sidebar_yes" name="enable_sidebar" value="true" <?php if($enable_sidebar=="true" || trim($enable_sidebar) =="" ) echo "checked='checked'"; ?> />
-     <label for="sidebar_no"><?php _e( 'No' , 'wplook' ); ?></label><input type="radio" id="sidebar_no" name="enable_sidebar" value="false" <?php if($enable_sidebar=="false") echo "checked='checked'"; ?>/>
+		<label for="sidebar_yes"><?php _e( 'Yes' , 'wplook' ); ?></label><input type="radio" id="sidebar_yes" name="enable_sidebar" value="true" <?php if($enable_sidebar=="true" || trim($enable_sidebar) =="" ) echo "checked='checked'"; ?> />
+		<label for="sidebar_no"><?php _e( 'No' , 'wplook' ); ?></label><input type="radio" id="sidebar_no" name="enable_sidebar" value="false" <?php if($enable_sidebar=="false") echo "checked='checked'"; ?>/>
 	</p>
 </div>
 <?php
@@ -286,10 +274,10 @@ the_time(get_option('time_format'));}
 		add_action('save_post', 'wpl_sidebars_save_postdata');
 		/* when the post is saved, save the custom data */
 		function wpl_sidebars_save_postdata($post_id) {
-			 // do not save if this is an auto save routine
-			 if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+			// do not save if this is an auto save routine
+			if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
 		$_POST["enable_sidebar"] = (!isset($_POST["enable_sidebar"])) ? '' : $_POST["enable_sidebar"];
-			   update_post_meta($post_id, "wpl_enable_sidebar", $_POST["enable_sidebar"]);
+			update_post_meta($post_id, "wpl_enable_sidebar", $_POST["enable_sidebar"]);
 
 	}
 

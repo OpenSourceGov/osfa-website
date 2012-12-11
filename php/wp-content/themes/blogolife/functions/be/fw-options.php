@@ -257,6 +257,12 @@ array( "name" => "<img src='$be_pathimages/icons/dribbble.png' width='16' />Drib
 		"std" => "",
 		"type" => "text"),
 
+array( "name" => "<img src='$be_pathimages/icons/pinterest.png' width='16' />Pinterest",
+		"desc" => "Insert the full URL of your <a href='http://pinterest.com/' target='_blank'>Pinterest</a> profile.",
+		"id" => $shortname."_pinterest",
+		"std" => "",
+		"type" => "text"),
+		
 array( "name" => "tab_content_2",
 		"type" => "tabcontent-close",
 		"icon" => "layout"),
@@ -457,7 +463,7 @@ function wpl_admin() {
 </select>
 	
 	</div>
-	<div class="desc_fm"><small><?php echo $value['desc']; ?></div>
+	<div class="desc_fm"><small><?php echo $value['desc']; ?></small></div>
 
 	<?php break; case "checkbox": ?>
 	<div class="name_fm"><?php echo $value['name']; ?></div>
