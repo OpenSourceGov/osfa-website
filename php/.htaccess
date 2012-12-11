@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
    RewriteEngine on
-   RewriteRule   ^/cgi-bin(.+)  http://mail.opensourceforamerica.org/cgi-bin$1  [R,L]
+   RewriteRule   ^cgi-bin(.+)  http://mail.opensourceforamerica.org/cgi-bin$1 [R=302] 
 </IfModule>
 
 # disable directory browsing -IMPORTANT, do NOT remove.
